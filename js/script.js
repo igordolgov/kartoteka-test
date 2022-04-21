@@ -1,7 +1,7 @@
 // Подключение левой части ("aside") из другого файла
-$(function() {
-    $("#aside").load("./../includes/_aside.html");
-});
+// $(function() {
+//     $("#aside").load("./_aside.html");
+// });
 
 // Текущая дата и время
 current_date = () => {
