@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Картотека</title>
+</head>
+
+<body class="container">
+    <aside class="mob-nav">
+        <div class="mob-nav__btn">
+            <div class="mob-nav__btn__burger"></div>
+        </div>
+
+        <div class="nav-main">
+            <a href="#!">
+                <span class="nav-main__img">
+                    <img src="./img/home.svg" width="18" alt=""/>
+                </span>
+                Главная
+            </a>
+        </div>
+
+        <div id="aside"></div> <!-- вставка левой части -->
+    </aside>
+
+    <div class="main">
+        <div class="toolbar">
+            <div class="toolbar__title">
+                ИП Васильев
+            </div>
+            <div class="toolbar__btn-add-user"></div>
+            <div class="toolbar__btn-settings">
+                <img src="./img/setting.svg" width="32" height="32" class="setting-icon" alt="Настройки" />
+            </div>
+        </div>
+
+        <div class="card-wrapper">
+            <div class="card1">
+                <h2 class="card__title">Работа с полями</h2>
+                <img src="./img/field-work.svg" alt="Отчеты и статистика" class="card-img"/>
+            </div>
+
+            <div class="card2">
+                <h2 class="card__title">Статистика урожая</h2>
+                <div class="card__sub-title">Поволжье</div>
+                <img src="./img/map.svg" alt="Отчеты и статистика" class="card-img"/>
+            </div>
+
+            <div class="card3">
+                <h2 class="card__title">Погода в Курской области</h2>
+                <div class="weather">
+                    <div class="temperature">
+                        <div class="card__sub-title">
+                            28.08.2020<br>
+                            Среда
+                        </div>
+                        <div class="weather__degree">
+                            +28<span class="weather__celsius">&deg;C</span>
+                        </div>
+                    </div>
+                    <div class="meteo">
+                        <div>
+                            <div class="weather__info">750 мм рт. ст.</div>
+                            <div class="weather__info">3,5 м/с</div>
+                        </div>
+                        <div>
+                            <div class="weather__info">Солнечно</div>
+                            <div class="weather__info">Осадки</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card4">
+                <h2 class="card__title">Отчеты и статистика</h2>
+                <div class="card__tab">
+                    <table class="card-table table">
+                        <thead>
+                            <tr>
+                                <th>2020 год</th>
+                                <th>2019 год</th>
+                                <th>2018 год</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="2020 год">123 000 000</td>
+                                <td data-label="2019 год">90 568 666</td>
+                                <td data-label="2018 год">200 568 666</td>
+                            </tr>
+                            <tr>
+                                <td data-label="2020 год">123 587 569</td>
+                                <td data-label="2019 год">123 587 569</td>
+                                <td data-label="2018 год">123 587 569</td>
+                            </tr>
+                            <tr>
+                                <td data-label="2020 год">258 654 588</td>
+                                <td data-label="2019 год">258 654 588</td>
+                                <td data-label="2018 год">258 654 588</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <img src="./img/g2.jpg" alt="" class="card__chart"/>
+                </div>
+            </div>
+
+            <div class="card5">
+                <h2 class="card__title">Сотрудники</h2>
+                <div class="employee">
+                    <div class="employee__item">
+                        <div class="employee__info">
+                            <div class="employee__name">Иванов Иван Иванович</div>
+                            <div class="text-light">Заместитель</div>
+                        </div>
+                        <div class="employee__contact">
+                            <div class="employee__phone">
+                                <a href="tel:">
+                                    <img src="./img/phone.svg" alt="Phone" class="employee__icon" />
+                                </a>
+                            </div>
+                            <div class="employee__mail">
+                                <a href="mailto:">
+                                    <img src="./img/mail.svg" alt="Mail" class="employee__icon" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee__item">
+                        <div class="employee__info">
+                            <div class="employee__name">Иванов Иван Иванович</div>
+                            <div class="text-light">Заместитель</div>
+                        </div>
+                        <div class="employee__contact">
+                            <div class="employee__phone">
+                                <a href="tel:">
+                                    <img src="./img/phone.svg" alt="Phone" class="employee__icon" />
+                                </a>
+                            </div>
+                            <div class="employee__mail">
+                                <a href="mailto:">
+                                    <img src="./img/mail.svg" alt="Mail" class="employee__icon" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#!" class="show-more">Показать еще</a>
+            </div>
+        </div>
+        <div class="card-wrapper-2">
+            <div class="card6">
+                <div class="flex between">
+                    <h2 class="card__title">Статистика пшена на полях ЦАО</h2>
+                    <div class="card__select">
+                        <select name="" id="">
+                            <option value="">По годам</option>
+                            <option value="">По месяцам</option>
+                            <option value="">По дням</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card__chart chart-card">
+                    <ul class="list-block">
+                        <li class="list-block__item">
+                            <h3 class="list-block__title">
+                                Урожай 2020
+                            </h3>
+                            <div class="text-light">
+                                15 150 000 тонн<br>
+                                120 областей
+                            </div>
+                        </li>
+                        <li class="list-block__item">
+                            <h3 class="list-block__title">
+                                Урожай 2019
+                            </h3>
+                            <div class="text-light">
+                                102 650 980 тонн<br>
+                                250 областей
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="chart-card__graphics">
+                        <img src="./img/circle-chart.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card7">
+                <div class="flex">
+                    <h2 class="card__title">Арендуемая техника</h2>
+                    <img src="./img/icon-star.svg" alt="Арендуемая техника" class="icon-star" />
+                </div>
+                <div class="flex">
+                    <div class="rent-desc">
+                        <h3 class="card__sub-title">ООО “Магнат Мед”</h3>
+                        <ul class="list-block">
+                            <li class="list-block__item">
+                                <div class="list-block__title">
+                                    Экскаваторы 2020
+                                </div>
+                                <div class="text-light">
+                                    15 100 машин<br>
+                                    130 областей<br>
+                                    5 предприятий
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rent-chart">
+                        <img src="./img/g3.jpg" alt="Диаграмма" />
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+
+    <footer><span id="doc_time">Дата и время</span></footer>
+
+    <script src="./js/script.js"></script>
+    <script defer>current_date();</script>
+</body>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Картотека</title>
+</head>
+
+<body class="container">
+    <aside class="mob-nav">
+        <div class="mob-nav__btn">
+            <div class="mob-nav__btn__burger"></div>
+        </div>
+
+        <div class="nav-main">
+            <a href="/">
+                <span class="nav-main__img">
+                    <img src="./img/home.svg" width="18" alt=""/>
+                </span>
+                Главная
+            </a>
+        </div>
+
+        <div id="aside"></div> <!-- вставка левой части -->
+    </aside>
+
+    <div class="main">
+        <div class="toolbar">
+            <div class="toolbar__title">
+                Карточка мероприятия
+                <span class="events__main__updated">Обновлено</span>
+            </div>
+            <a href="#!" class="verification">Материалы проверки</a>
+            <div class="toolbar__btn-add-user"></div>
+            <div class="toolbar__btn-settings">
+                <img src="./img/setting.svg" width="32" height="32" class="setting-icon" alt="Настройки" />
+            </div>
+        </div>
+
+        <div class="events__main">
+            <div class="events__main">
+                <div class="events__card1">
+                    <h2>Структура предприятия</h2>
+
+                    <hr>
+
+                    <h3>ФГБУН Институт нанотехнологий микроэлектроники РАН</h3>
+                    <span class="notification">Идёт процесс ликвидации с 25.10.2019 по 10.10.2020</span>
+
+                    <div class="post">Директор: Сауров Александр Николаевич</div>
+                    <div class="contract">Трудовой контракт с 25.03.2017 по 25.03.2023</div>
+
+                    <div class="adress">119991, Москва, Ленинский просп., 32а</div>
+                    <div class="staff-amount">123 сотрудника</div>
+
+                    <hr>
+
+                    <h3>ФГБУН Институт нанотехнологий микроэлектроники РАН</h3>
+                    <span class="notification">Идёт процесс ликвидации с 25.10.2019 по 10.10.2020</span>
+
+                    <div class="post">Директор: Сауров Александр Николаевич</div>
+                    <div class="contract">Трудовой контракт с 25.03.2017 по 25.03.2023</div>
+
+                    <div class="adress">119991, Москва, Ленинский просп., 32а</div>
+                    <div class="staff-amount">123 сотрудника</div>
+
+                    <hr>
+
+                    <h3>ФГБУН Институт нанотехнологий микроэлектроники РАН</h3>
+                    <span class="notification">Идёт процесс ликвидации с 25.10.2019 по 10.10.2020</span>
+
+                    <div class="post">Директор: Сауров Александр Николаевич</div>
+                    <div class="contract">Трудовой контракт с 25.03.2017 по 25.03.2023</div>
+
+                    <div class="adress">119991, Москва, Ленинский просп., 32а</div>
+                    <div class="staff-amount">123 сотрудника</div>
+                </div>
+
+                <div class="events__card2">
+                    <div class="checking">Справка проверки
+                        <div class="underline"></div>
+                        <button type="submit">Сформировать</button>
+                    </div>
+                    <div class="checking">Акт проверки
+                        <div class="underline"></div>
+                        <button type="submit">Сформировать</button>
+                    </div>
+                    <div class="checking">Схема проверки
+                        <div class="underline"></div>
+                        <button type="submit">Сформировать</button>
+                    </div>
+                </div>
+
+                <div class="events__card3">
+                    <form action="post" class="checking-form">
+                        <label for="desigion" class="form-label">Решение о проведении проверки</label>
+                        <textarea name="desigion" id="desigion" cols="30" rows="4" placeholder="Введите текст"></textarea>
+
+                        <hr>
+
+                        <label for="organization" class="form-label">Организация</label>
+                        <textarea name="organization" id="organization" cols="30" rows="1" placeholder="ООО “РесерчХолд”"></textarea>
+
+                        <label for="type" class="form-label">Вид проверки</label><br>
+                        <div class="select-wrapper">
+                            <select name="type" id="type">
+                                <option>Плановая</option>
+                                <option>Выездная</option>
+                                <option>Фактическая</option>
+                            </select>
+                        </div>
+
+                        <label for="type" class="form-label">Форма проверки</label><br>
+                        <div class="select-wrapper">
+                            <select name="type" id="type">
+                                <option>Выездная</option>
+                                <option>Плановая</option>
+                                <option>Фактическая</option>
+                            </select>
+                        </div>
+
+                        <label for="type" class="form-label">Метод проверки</label><br>
+                        <div class="select-wrapper">
+                            <select name="type" id="type">
+                                <option>Фактическая</option>
+                                <option>Плановая</option>
+                                <option>Выездная</option>
+                            </select>
+                        </div>
+
+                        <label for="date" class="form-label">Сроки проведения проверки</label>
+                        <textarea name="date" id="date" cols="30" rows="1" placeholder="02.08.2020 - 05.08.2020"></textarea>
+
+                        <label for="place" class="form-label">Место проведения проверки</label>
+                        <textarea name="place" id="place" cols="30" rows="1" placeholder="г. Москва, Ленинский пр-т, 178, к4"></textarea>
+
+                        <button type="submit">Написать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer><span id="doc_time">Дата и время</span></footer>
+
+    <script src="./js/script.js"></script>
+    <script defer>current_date();</script>
+</body>

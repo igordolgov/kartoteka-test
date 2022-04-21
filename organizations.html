@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Организация</title>
+</head>
+<body class="container">
+    <aside class="mob-nav">
+        <div class="mob-nav__btn">
+            <div class="mob-nav__btn__burger"></div>
+        </div>
+
+        <div class="nav-main">
+            <a href="/" class="nav-main__link">
+                <span class="nav-main__img">
+                    <img src="./img/home.svg" width="18" alt="" class="nav-main__icon" />
+                </span>
+                Главная
+            </a>
+        </div>
+
+        <div id="aside"></div> <!-- подключение левой части -->
+    </aside>
+
+    <footer><span id="doc_time">Дата и время</span></footer>
+
+    <script src="./js/script.js"></script>
+    <script defer>current_date();</script>
+</body>
+</html>
