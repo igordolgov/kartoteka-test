@@ -3,6 +3,15 @@
 //     $("#aside").load("./_aside.html");
 // });
 
+const title = document.title;
+if(title == 'Картотека') {
+    $(".nav-main a").css({"color":"var(--active-color)"})
+} else if(title == 'Мероприятия') {
+    $(".nav__link").eq(0).css({"color":"var(--active-color)"})
+} else if(title == 'Организации') {
+    $(".nav__link").eq(6).css({"color":"var(--active-color)"})
+};
+
 // Текущая дата и время
 current_date = () => {
     let d = new Date()

@@ -2,23 +2,25 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Организация</title>
+    <title>Организации</title>
 </head>
-<body class="container">
+
+<body class="organization container">
     <aside class="mob-nav">
         <div class="mob-nav__btn">
             <div class="mob-nav__btn__burger"></div>
         </div>
 
         <div class="nav-main">
-            <a href="/kartoteka-test/" class="nav-main__link">
+            <a href="/">
                 <span class="nav-main__img">
-                    <img src="./img/home.svg" width="18" alt="" class="nav-main__icon" />
+                    <img src="./img/home.svg" width="18" alt=""/>
                 </span>
                 Главная
             </a>
@@ -96,9 +98,430 @@
         </nav>
     </aside>
 
+    <div class="main">
+        <div class="toolbar">
+            <div class="toolbar__title">
+                Организации
+                <span class="events__main__updated">Обновлено</span>
+            </div>
+            <div class="filter-wrapper">
+                <input type="search" id="page-search" name="search"
+                       class="toolbar__search"
+                       placeholder="Поиск организации по ИНН или ОГРН">
+                <img src="./img/filter.svg" alt="icon filter" class="filter-icon">
+            </div>
+            <button type="submit" class="verification">Найти</button>
+            <div class="toolbar__btn-add-user"></div>
+            <div class="toolbar__btn-settings">
+                <img src="./img/setting.svg" width="32" height="32" class="setting-icon" alt="Настройки" />
+            </div>
+        </div>
+
+        <div class="organization__main">
+            <div class="organization__card">
+                <div class="scroll-table">
+                    <div class="scroll-table-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Наименование организации">
+                                            Наименование организации
+                                        </span></span>
+                                    </th>
+                                    <th class="table__col2">ИНН</th>
+                                    <th class="table__col3">Руководитель</th>
+                                    <th class="table__col4">Адрес</th>
+                                    <th class="table__col5"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title='Фонд "Сколково"'>
+                                            <img src="./img/rating1.svg" alt="Рейтинг">
+                                            Фонд "Сколково"
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7706412961</td>
+                                    <td class="table__col3">Балега Юрий Юрьевич</td>
+                                    <td class="table__col4">обл. Московская, г. Одинцово, д. Сколково, ул. Новая, 100</td>
+                                    <td class="table__col5">
+                                       <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating1.svg" alt="Рейтинг">
+                                            АНО "Издательство РАМН
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704274804</td>
+                                    <td class="table__col3">Султыгов Марат Магомедович</td>
+                                    <td class="table__col4">г. Москва, Переулок Яковоапостольский, д. 11-13, стр. 1, пом. 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating1.svg" alt="Рейтинг">
+                                            Российское историческое общество
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704280029</td>
+                                    <td class="table__col3">Иванов  Петр Иванович</td>
+                                    <td class="table__col4">г. Москва, ул. Воронцово поле, д. 13, стр 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Академический учебно-научный центр по изучению программирования">
+                                            <img src="./img/rating2.svg" alt="Рейтинг">
+                                            Академический учебно-научный центр по изучению программирования
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7728514244</td>
+                                    <td class="table__col3">Сергеев Александр Михайлович</td>
+                                    <td class="table__col4">г. Москва, просп. Ленинградский, д. 77, кор. 1, под пом VIII К 7</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title='Фонд "Сколково"'>
+                                            <img src="./img/rating2.svg" alt="Рейтинг">
+                                            Фонд "Сколково"
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7706412961</td>
+                                    <td class="table__col3">Балега Юрий Юрьевич</td>
+                                    <td class="table__col4">обл. Московская, г. Одинцово, д. Сколково, ул. Новая, 100</td>
+                                    <td class="table__col5">
+                                       <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating2.svg" alt="Рейтинг">
+                                            АНО "Издательство РАМН
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704274804</td>
+                                    <td class="table__col3">Султыгов Марат Магомедович</td>
+                                    <td class="table__col4">г. Москва, Переулок Яковоапостольский, д. 11-13, стр. 1, пом. 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating3.svg" alt="Рейтинг">
+                                            Российское историческое общество
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704280029</td>
+                                    <td class="table__col3">Иванов  Петр Иванович</td>
+                                    <td class="table__col4">г. Москва, ул. Воронцово поле, д. 13, стр 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Академический учебно-научный центр по изучению программирования">
+                                            <img src="./img/rating3.svg" alt="Рейтинг">
+                                            Академический учебно-научный центр по изучению программирования
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7728514244</td>
+                                    <td class="table__col3">Сергеев Александр Михайлович</td>
+                                    <td class="table__col4">г. Москва, просп. Ленинградский, д. 77, кор. 1, под пом VIII К 7</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title='Фонд "Сколково"'>
+                                            <img src="./img/rating3.svg" alt="Рейтинг">
+                                            Фонд "Сколково"
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7706412961</td>
+                                    <td class="table__col3">Балега Юрий Юрьевич</td>
+                                    <td class="table__col4">обл. Московская, г. Одинцово, д. Сколково, ул. Новая, 100</td>
+                                    <td class="table__col5">
+                                       <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating1.svg" alt="Рейтинг">
+                                            АНО "Издательство РАМН
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704274804</td>
+                                    <td class="table__col3">Султыгов Марат Магомедович</td>
+                                    <td class="table__col4">г. Москва, Переулок Яковоапостольский, д. 11-13, стр. 1, пом. 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating2.svg" alt="Рейтинг">
+                                            Российское историческое общество
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704280029</td>
+                                    <td class="table__col3">Иванов  Петр Иванович</td>
+                                    <td class="table__col4">г. Москва, ул. Воронцово поле, д. 13, стр 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Академический учебно-научный центр по изучению программирования">
+                                            <img src="./img/rating3.svg" alt="Рейтинг">
+                                            Академический учебно-научный центр по изучению программирования
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7728514244</td>
+                                    <td class="table__col3">Сергеев Александр Михайлович</td>
+                                    <td class="table__col4">г. Москва, просп. Ленинградский, д. 77, кор. 1, под пом VIII К 7</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title='Фонд "Сколково"'>
+                                            <img src="./img/rating1.svg" alt="Рейтинг">
+                                            Фонд "Сколково"
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7706412961</td>
+                                    <td class="table__col3">Балега Юрий Юрьевич</td>
+                                    <td class="table__col4">обл. Московская, г. Одинцово, д. Сколково, ул. Новая, 100</td>
+                                    <td class="table__col5">
+                                       <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating2.svg" alt="Рейтинг">
+                                            АНО "Издательство РАМН
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704274804</td>
+                                    <td class="table__col3">Султыгов Марат Магомедович</td>
+                                    <td class="table__col4">г. Москва, Переулок Яковоапостольский, д. 11-13, стр. 1, пом. 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating3.svg" alt="Рейтинг">
+                                            Российское историческое общество
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704280029</td>
+                                    <td class="table__col3">Иванов  Петр Иванович</td>
+                                    <td class="table__col4">г. Москва, ул. Воронцово поле, д. 13, стр 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Академический учебно-научный центр по изучению программирования">
+                                            <img src="./img/rating1.svg" alt="Рейтинг">
+                                            Академический учебно-научный центр по изучению программирования
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7728514244</td>
+                                    <td class="table__col3">Сергеев Александр Михайлович</td>
+                                    <td class="table__col4">г. Москва, просп. Ленинградский, д. 77, кор. 1, под пом VIII К 7</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Академический учебно-научный центр по изучению программирования">
+                                            <img src="./img/rating3.svg" alt="Рейтинг">
+                                            Академический учебно-научный центр по изучению программирования
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7728514244</td>
+                                    <td class="table__col3">Сергеев Александр Михайлович</td>
+                                    <td class="table__col4">г. Москва, просп. Ленинградский, д. 77, кор. 1, под пом VIII К 7</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title='Фонд "Сколково"'>
+                                            <img src="./img/rating3.svg" alt="Рейтинг">
+                                            Фонд "Сколково"
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7706412961</td>
+                                    <td class="table__col3">Балега Юрий Юрьевич</td>
+                                    <td class="table__col4">обл. Московская, г. Одинцово, д. Сколково, ул. Новая, 100</td>
+                                    <td class="table__col5">
+                                       <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating1.svg" alt="Рейтинг">
+                                            АНО "Издательство РАМН
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704274804</td>
+                                    <td class="table__col3">Султыгов Марат Магомедович</td>
+                                    <td class="table__col4">г. Москва, Переулок Яковоапостольский, д. 11-13, стр. 1, пом. 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating2.svg" alt="Рейтинг">
+                                            Российское историческое общество
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704280029</td>
+                                    <td class="table__col3">Иванов  Петр Иванович</td>
+                                    <td class="table__col4">г. Москва, ул. Воронцово поле, д. 13, стр 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Академический учебно-научный центр по изучению программирования">
+                                            <img src="./img/rating3.svg" alt="Рейтинг">
+                                            Академический учебно-научный центр по изучению программирования
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7728514244</td>
+                                    <td class="table__col3">Сергеев Александр Михайлович</td>
+                                    <td class="table__col4">г. Москва, просп. Ленинградский, д. 77, кор. 1, под пом VIII К 7</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title='Фонд "Сколково"'>
+                                            <img src="./img/rating1.svg" alt="Рейтинг">
+                                            Фонд "Сколково"
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7706412961</td>
+                                    <td class="table__col3">Балега Юрий Юрьевич</td>
+                                    <td class="table__col4">обл. Московская, г. Одинцово, д. Сколково, ул. Новая, 100</td>
+                                    <td class="table__col5">
+                                       <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating2.svg" alt="Рейтинг">
+                                            АНО "Издательство РАМН
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704274804</td>
+                                    <td class="table__col3">Султыгов Марат Магомедович</td>
+                                    <td class="table__col4">г. Москва, Переулок Яковоапостольский, д. 11-13, стр. 1, пом. 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Российское историческое общество">
+                                            <img src="./img/rating3.svg" alt="Рейтинг">
+                                            Российское историческое общество
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7704280029</td>
+                                    <td class="table__col3">Иванов  Петр Иванович</td>
+                                    <td class="table__col4">г. Москва, ул. Воронцово поле, д. 13, стр 1</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__col1"><span class="dynamic-container">
+                                        <span class="dynamic-ellipsis"
+                                            title="Академический учебно-научный центр по изучению программирования">
+                                            <img src="./img/rating1.svg" alt="Рейтинг">
+                                            Академический учебно-научный центр по изучению программирования
+                                        </span></span>
+                                    </td>
+                                    <td class="table__col2">7728514244</td>
+                                    <td class="table__col3">Сергеев Александр Михайлович</td>
+                                    <td class="table__col4">г. Москва, просп. Ленинградский, д. 77, кор. 1, под пом VIII К 7</td>
+                                    <td class="table__col5">
+                                        <a href="#!"> <img src="./img/icon-edit.svg" alt="Редактирование"></a>
+                                     </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer><span id="doc_time">Дата и время</span></footer>
 
     <script src="./js/script.js"></script>
-    <script defer>current_date();</script>
+    <script>current_date();</script>
 </body>
-</html>

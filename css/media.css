@@ -1,9 +1,14 @@
+@media only screen and (min-width: 1367px) {
+    .card-wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(380px, auto));
+    }
+}
 @media only screen and (min-width: 1024px) {
     .mob-nav {
         min-width: 240px;
         align-self: stretch;
         background: #1f2339;
-        color: #ffffff;
+        color: var(--white);
         padding-top: 40px;
         padding-left: 16px;
         padding-right: 10px;
@@ -13,6 +18,7 @@
     .card-table {
         max-width: 374px;
         width: 100%;
+        height: 100%;
    }
     .card-table tr td:first-child {
         border-left: 0;
@@ -29,6 +35,9 @@
         vertical-align: middle;
         padding-left: 10px;
         height: 38px;
+   }
+    .card4 .card__chart {
+        margin-top: -40px;
    }
 }
 @media only screen and (max-width: 1023px) and (min-width: 320px) {
@@ -71,7 +80,7 @@
     .table tr {
         margin-bottom: 10px;
         display: block;
-        border-bottom: 1px solid #a1a6be;
+        border-bottom: 1px solid var(--light-grey);
    }
     .table tr:last-child {
         margin-bottom: 0;
@@ -80,7 +89,7 @@
         display: block;
         text-align: right;
         padding: 5px 0;
-        border-bottom: 1px dotted #a1a6be;
+        border-bottom: 1px dotted var(--light-grey);
         border-right: 1px solid transparent;
    }
     .table td:last-child {
@@ -103,7 +112,7 @@
     .mob-nav__btn__burger::before,
     .mob-nav__btn__burger::after {
         content: "";
-        background-color: #ffffff;
+        background-color: var(--white);
         height: 2px;
         display: block;
         width: 100%;
@@ -146,10 +155,10 @@
         display: flex;
         padding: 15px 90px 15px 15px;
         margin: 0 -15px;
-        background: #383e57;
+        background: var(--card-color);
    }
     .mob-nav.show .user__name {
-        color: #ffffff;
+        color: var(--white);
    }
     .mob-nav.show .nav-main,
     .mob-nav.show .nav {
@@ -174,19 +183,6 @@
    }
     .toolbar__btn-add-user {
         margin-right: 15px;
-   }
-    .row {
-        margin: 0 -7.5px;
-   }
-    .col-4, .col-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding: 0 7.5px 15px;
-   }
-    .col-8 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        padding: 0 7.5px 15px;
    }
     .card {
         box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.034);
@@ -227,11 +223,7 @@
    }
 }
 @media only screen and (max-width: 599px) and (min-width: 320px) {
-    .col-4, .col-6, .col-8 {
-        flex: 0 0 100%;
-        max-width: 100%;
-   }
-    .w-mob, .card__tab, .card__chart {
+    .card__tab, .card__chart {
         width: 100%;
    }
     img {
